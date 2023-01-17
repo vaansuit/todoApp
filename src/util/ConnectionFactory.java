@@ -6,8 +6,8 @@ import java.sql.ResultSet;
 
 public class ConnectionFactory {
 
-    public static final String DRIVER = "com.mysql.jdbc.Driver"; //ativando driver jdbc
-    public static final String URL = "jdb:mysql://localhost:3306/todoapp"; //url de conexão com o banco
+    public static final String DRIVER = "com.mysql.cj.jdbc.Driver"; //ativando driver jdbc
+    public static final String URL = "jdbc:mysql://localhost:3306/todoapp"; //url de conexão com o banco
     public static final String USER = "root"; //usuario padrao mysql
     public static final String PASS = ""; //senha padrao mysql
 

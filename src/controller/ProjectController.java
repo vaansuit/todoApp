@@ -2,7 +2,7 @@ package controller;
 
 import model.Project;
 import util.ConnectionFactory;
-
+import java.util.Date;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -32,7 +32,7 @@ public class ProjectController {
 
             //executando os comandos
             statement.execute();
-        } catch(Exception e) {
+        } catch(SQLException e) {
             throw new RuntimeException("Erro ao salvar projeto! ", e);
         } finally {
             ConnectionFactory.closeConnection(c, statement);
@@ -62,7 +62,7 @@ public class ProjectController {
             statement.execute();
 
         } catch (Exception e) {
-            throw new RuntimeException("Erro ao atualizar projeto! ", e);
+            throw new RuntimeException("Erro ao atualizar projeto! " + e.getMessage(), e);
         } finally {
             ConnectionFactory.closeConnection(c, statement);
         }
