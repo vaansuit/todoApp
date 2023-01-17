@@ -76,6 +76,8 @@ public class TaskController {
             statement.setDate(8, new java.sql.Date(task.getUpdatedAt().getTime()));
             statement.setInt (9, task.getId());
 
+            statement.execute();
+
         } catch (Exception e) {
             throw new RuntimeException("Erro ao atualizar tarefa! ", e);
         } finally {
@@ -136,7 +138,7 @@ public class TaskController {
                tasks.add(task);
             }
         } catch (Exception e) {
-            throw new RuntimeException("Erro ao pesquisar tarefa! ", e);
+            throw new RuntimeException("Erro ao exibir tarefas! ", e);
         } finally {
             ConnectionFactory.closeConnection(c, statement, rset);
         }
