@@ -98,6 +98,10 @@ public class Task {
         this.deadline = deadline;
     }
 
+    public Task() {
+        this.createdAt = new Date();
+    }
+
     @Override
     public String toString() {
         return "Task{" +
