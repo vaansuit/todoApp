@@ -91,6 +91,16 @@ public class MainView {
 		taskHeaderLabel.setBounds(10, 11, 102, 28);
 		taskHeaderPanel.add(taskHeaderLabel);
 		
+		JLabel labelAddTaskIcon = new JLabel("");
+		labelAddTaskIcon.setBounds(139, 0, 59, 50);
+		ImageIcon addTaskIcon = new ImageIcon("C:\\\\\\\\Users\\\\\\\\Usuario\\\\\\\\Documents\\\\\\\\JAVA\\\\\\\\JAVA_APPS\\\\\\\\TodoApp\\\\\\\\src\\\\\\\\img\\\\\\\\addIcon.png");
+		Image imageAddTaskIcon = addTaskIcon.getImage();
+		Image addTaskIconScale = imageAddTaskIcon.getScaledInstance(labelAddTaskIcon.getWidth(), labelAddTaskIcon.getHeight(), Image.SCALE_SMOOTH);
+		ImageIcon scaleTaskIcon = new ImageIcon(addTaskIconScale);
+		labelAddTaskIcon.setIcon(scaleTaskIcon);
+		
+		taskHeaderPanel.add(labelAddTaskIcon);
+		
 		JPanel projectBodyPanel = new JPanel();
 		projectBodyPanel.setBackground(Color.WHITE);
 		projectBodyPanel.setBounds(10, 306, 208, 530);
